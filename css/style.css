@@ -1,0 +1,452 @@
+/*  NIM   : 10122901
+    Nama  : Aip Ariyadi
+	Kelas : IF-13 */
+	
+:root {
+    --primaryGreen: #38E54D;
+    --bgAnggur: #575DAD;
+    --bgApel: #B4E881;
+    --bgBuahNaga: #E560AA;
+    --bgJeruk: #F48F5E;
+    --bgKelengkeng: #D0A272;
+    --bgMelon: #9BE58A;
+    --bgNanas: #EBE848;
+    --bgPepaya: #FF874D;
+    --bgPisang: #EBE578;
+    --bgSalak: #8B766B;
+    --bgSemangka: #FF5D5C;
+    --bgStroberi: #FF5A61;
+}
+
+* {
+    /* For Reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primaryGreen) !important;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: var(--primaryGreen);
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: 700;
+}
+
+
+/* Footer */
+.btn-facebook {
+    background-color: #3B5998;
+}
+
+.btn-twitter {
+    background-color: #55ACEE;
+}
+
+.btn-instagram {
+    background-color: #AC2BAC;
+}
+
+.btn-youtube {
+    background-color: #FF0000;
+}
+
+.btn-linkedin {
+    background-color: #0082CA;
+}
+
+.btn-tiktok {
+    background-color: #000000;
+}
+
+.copyright {
+    background-color: #00000033
+}
+
+/* Global */
+.sub-title {
+	color: var(--primaryGreen);
+}
+
+/* Beranda Style */
+.top-content {
+	background-color: var(--primaryGreen);
+	color: #FFFFFF;
+}
+
+.system-content {
+	background-color: #cacaca66;
+}
+
+/* Produk Style */
+.card-produk {
+	flex-wrap: wrap;
+	display: flex;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+	border-radius: 10px;
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+	position: relative;
+    background-color: #E6EAEE;
+}
+
+.card-produk .title-produk {
+	font-size: 1.50rem;
+}
+
+.card-produk .photo-produk {
+	max-height: 180px;
+	width: 100%;
+	object-fit: cover;
+	position: relative;
+}
+
+.card-produk .bar-produk {
+	width: 50px;
+	height: 3px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #424242;
+	transition: width 0.2s ease;
+}
+
+.card-produk .desc-produk {
+    color: #18151f;
+	padding: 1.5rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-produk:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #424242, transparent 50%);
+	opacity: 1;
+	border-radius: 10px;
+}
+
+.card-produk:hover .bar-produk {
+	width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+	.card-produk {
+		flex-wrap: inherit;
+	}
+
+	.card-produk .title-produk {
+		font-size: 2rem;
+	}
+
+	.card-produk .photo-produk {
+		max-width: 300px;
+		max-height: 100%;
+		transition: transform 0.3s ease;
+	}
+
+	.card-produk .desc-produk {
+		padding: 3rem;
+		width: 100%;
+	}
+
+	.card-produk .media.desc-produk:before {
+		content: "";
+		position: absolute;
+		display: block;
+		background: #18151f;
+		top: -20%;
+		height: 130%;
+		width: 55px;
+	}
+    
+	.card-produk:hover .photo-produk {
+		transform: scale(1.1);
+	}
+
+	.card-produk:nth-child(2n+1) {
+		flex-direction: row;
+	}
+
+	.card-produk:nth-child(2n+0) {
+		flex-direction: row-reverse;
+	}
+
+	.card-produk:nth-child(2n+1) .desc-produk::before {
+		left: -15px !important;
+		transform: rotate(4deg);
+	}
+
+	.card-produk:nth-child(2n+0) .desc-produk::before {
+		right: -15px !important;
+		transform: rotate(-4deg);
+	}
+}
+@media screen and (min-width: 1024px) {
+	.desc-produk {
+		padding: 3rem 3.5rem;
+	}
+
+	.desc-produk:before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: -20%;
+		height: 130%;
+		width: 55px;
+	}
+
+	.card-produk .desc-produk:before {
+		background: #E6EAEE;
+	}
+}
+
+.anggur .bar-produk {
+	background-color: var(--bgAnggur);
+}
+.anggur::before {
+	background-image: linear-gradient(-30deg, #575dad98, transparent 50%);
+}
+.anggur:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #575DAD98, transparent 50%);
+}
+
+.pisang .bar-produk {
+	background-color: var(--bgPisang);
+}
+.pisang::before {
+	background-image: linear-gradient(-30deg, #FEF57898, transparent 50%);
+}
+.pisang:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #FEF57898, transparent 50%);
+}
+
+.semangka .bar-produk {
+	background-color: var(--bgSemangka);
+}
+.semangka::before {
+	background-image: linear-gradient(-30deg, #FF5D5C98, transparent 50%);
+}
+.semangka:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #FF5D5C98, transparent 50%);
+}
+
+.jeruk .bar-produk {
+	background-color: var(--bgJeruk);
+}
+.jeruk::before {
+	background-image: linear-gradient(-30deg, #F48F5E98, transparent 50%);
+}
+.jeruk:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #F48F5E98, transparent 50%);
+}
+
+.salak .bar-produk {
+	background-color: var(--bgSalak);
+}
+.salak::before {
+	background-image: linear-gradient(-30deg, #8B766B98, transparent 50%);
+}
+.salak:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #8B766B98, transparent 50%);
+}
+
+.bnaga .bar-produk {
+	background-color: var(--bgBuahNaga);
+}
+.bnaga::before {
+	background-image: linear-gradient(-30deg, #E560AA98, transparent 50%);
+}
+.bnaga:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #E560AA98, transparent 50%);
+}
+
+.nanas .bar-produk {
+	background-color: var(--bgNanas);
+}
+.nanas::before {
+	background-image: linear-gradient(-30deg, #EBE84898, transparent 50%);
+}
+.nanas:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #EBE84898, transparent 50%);
+}
+
+.apel .bar-produk {
+	background-color: var(--bgApel);
+}
+.apel::before {
+	background-image: linear-gradient(-30deg, #B4E88198, transparent 50%);
+}
+.apel:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #B4E88198, transparent 50%);
+}
+
+.pepaya .bar-produk {
+	background-color: var(--bgPepaya);
+}
+.pepaya::before {
+	background-image: linear-gradient(-30deg, #FF874D98, transparent 50%);
+}
+.pepaya:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #FF874D98, transparent 50%);
+}
+
+.kelengkeng .bar-produk {
+	background-color: var(--bgKelengkeng);
+}
+.kelengkeng::before {
+	background-image: linear-gradient(-30deg, #D0A27298, transparent 50%);
+}
+.kelengkeng:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #D0A27298, transparent 50%);
+}
+
+.melon .bar-produk {
+	background-color: var(--bgMelon);
+}
+.melon::before {
+	background-image: linear-gradient(-30deg, #9BE58A98, transparent 50%);
+}
+.melon:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #9BE58A98, transparent 50%);
+}
+
+.stroberi .bar-produk {
+	background-color: var(--bgStroberi);
+}
+.stroberi::before {
+	background-image: linear-gradient(-30deg, #FF5A6198, transparent 50%);
+}
+.stroberi:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, #FF5A6198, transparent 50%);
+}
+
+@media screen and (min-width: 769px) {
+    .anggur::before {
+        background-image: linear-gradient(-80deg, #575dad98, transparent 50%);
+    }
+    .anggur:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #575DAD98, transparent 50%);
+    }
+
+    .pisang::before {
+        background-image: linear-gradient(-80deg, #FEF57898, transparent 50%);
+    }
+    .pisang:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #FEF57898, transparent 50%);
+    }
+
+    .semangka::before {
+        background-image: linear-gradient(-80deg, #FF5D5C98, transparent 50%);
+    }
+    .semangka:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #FF5D5C98, transparent 50%);
+    }
+
+    .jeruk::before {
+        background-image: linear-gradient(-80deg, #F48F5E98, transparent 50%);
+    }
+    .jeruk:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #F48F5E98, transparent 50%);
+    }
+
+    .salak::before {
+        background-image: linear-gradient(-80deg, #8B766B98, transparent 50%);
+    }
+    .salak:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #8B766B98, transparent 50%);
+    }
+
+    .bnaga::before {
+        background-image: linear-gradient(-80deg, #E560AA98, transparent 50%);
+    }
+    .bnaga:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #E560AA98, transparent 50%);
+    }
+
+    .nanas::before {
+        background-image: linear-gradient(-80deg, #EBE84898, transparent 50%);
+    }
+    .nanas:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #EBE84898, transparent 50%);
+    }
+
+    .apel::before {
+        background-image: linear-gradient(-80deg, #B4E88198, transparent 50%);
+    }
+    .apel:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #B4E88198, transparent 50%);
+    }
+
+    .pepaya::before {
+        background-image: linear-gradient(-80deg, #FF874D98, transparent 50%);
+    }
+    .pepaya:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #FF874D98, transparent 50%);
+    }
+
+    .kelengkeng::before {
+        background-image: linear-gradient(-80deg, #D0A27298, transparent 50%);
+    }
+    .kelengkeng:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #D0A27298, transparent 50%);
+    }
+
+    .melon::before {
+        background-image: linear-gradient(-80deg, #9BE58A98, transparent 50%);
+    }
+    .melon:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #9BE58A98, transparent 50%);
+    }
+
+    .stroberi::before {
+        background-image: linear-gradient(-80deg, #FF5A6198, transparent 50%);
+    }
+    .stroberi:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, #FF5A6198, transparent 50%);
+    }
+
+}
+
+/* Katalog Style */
+.box-katalog {
+    box-shadow: 1px 1px 8px #a5a5a5;
+    padding: 30px 20px;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.box-katalog:hover {
+    box-shadow: 2px 2px 10px #a5a5a5;
+    transform: scale(1.03);
+}
+
+/* Tentang Style */
+
+/* Kontak Style */
+.form-kontak {
+    background-color: #cacaca66;
+}

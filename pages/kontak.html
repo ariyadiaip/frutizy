@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- NIM   : 10122901
+		     Nama  : Aip Ariyadi
+		     Kelas : IF-13 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frutizy</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+        
+    <!-- Icon Web -->
+    <link rel="shortcut icon" href="../multimedia/image/icon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar : START-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+      <a class="navbar-brand ml-4" href="../index.html">Frutizy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="../index.html">Beranda</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="produk.html">Produk<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="katalog.html">Katalog</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="tentang.html">Tentang</a>
+          </li>
+          <li class="nav-item mx-3 active">
+            <a class="nav-link" href="#">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar : END-->
+
+    <!-- Content : START-->
+    <div class="container">
+      <!-- Maps & Address Section-->
+      <div class="row">
+        <div class="col-md-5 mx-3 my-5">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.029660636479!2d107.61328591431676!3d-6.887050669304864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6f8aa08188b%3A0x632d24e6061e8903!2sUniversitas%20Komputer%20Indonesia!5e0!3m2!1sen!2sid!4v1675151540581!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-5 mx-3 my-5 px-4">
+          <div class="h1 sub-title mb-4"><span class="font-weight-bold">Hubungi</span> Kami</div>
+          <h4>Menara Frutizy</h4>
+          <p>Jl. Dipati Ukur No.112, Lebakgede, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132</p>
+        </div>
+      </div>
+
+      <!-- Form Contact Section -->
+      <div class="row my-5 ">
+        <div class="col-md-5 px-5 my-3">
+          <h2 class="font-weight-bold sub-title">Info Lebih Lanjut</h2>
+          <p>Ingin mengetahui Frutizy lebih lanjut? Ajukan pertanyaan Anda kepada kami.</p>
+          <div class="text-center">
+            <img data-src="../multimedia/image/contact_vector.png" class="img-fluid lazyload" alt="Contact">
+          </div>
+        </div>
+        <div class="form-kontak col-md mx-3 p-5 my-3 rounded">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Nama</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Masukkan Nama Anda" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPhoneNumber">Nomor HP</label>
+                <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Masukkan No. HP" required onkeypress="return hanyaAngka(event);">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Alamat email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Alamat Email" required>
+            </div>
+            <div class="form-group">
+              <label for="inputMessage">Pesan</label>
+              <textarea class="form-control" id="inputMessage" placeholder="Pesan Anda" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <h1 class="text-center font-weight-bold sub-title" >FAQ</h1>
+
+      <div class="accordion my-5" id="accordionFaq">
+        <!-- Question 1 -->
+        <div class="card">
+          <div class="card-header" id="questionOne">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Bagaimana cara memesan buah-buahan di Frutizy?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="questionOne" data-parent="#accordionFaq">
+            <div class="card-body">
+              Anda dapat memesan buah-buahan dengan menghubungi kami di Whatsapp : <a href="https://wa.me/6281234567890" target="_blank">+62 812 3456 7890</a>. Setelah itu Anda akan diarahkan untuk memilih produk, mengisi data pengiriman, dan melakukan pembayaran.
+            </div>
+          </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="card">
+          <div class="card-header" id="questionTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Apakah ada minimum order untuk pembelian buah-buahan di Frutizy?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="questionTwo" data-parent="#accordionFaq">
+            <div class="card-body">
+              Untuk batasan minimum order berada di 250 gram. Dan tidak ada batasan maksimum order di Frutizy, sehingga Anda dapat membeli sebanyak yang Anda inginkan.
+            </div>
+          </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="card">
+          <div class="card-header" id="questionThree">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Apakah buah-buahan yang dijual di Frutizy segar?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="questionThree" data-parent="#accordionFaq">
+            <div class="card-body">
+              Ya, semua buah-buahan yang kami jual adalah buah-buahan yang terjamin kesegarannya dan berkualitas tinggi. Karena produk kami dipilih dengan hati-hati dan diperiksa dengan ketat.
+            </div>
+          </div>
+        </div>
+        <!-- Question 4 -->
+        <div class="card">
+          <div class="card-header" id="questionFour">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Bagaimana jika buah-buahan yang diterima tidak segar atau rusak?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="questionFour" data-parent="#accordionFaq">
+            <div class="card-body">
+              Kami sangat memperhatikan kualitas produk yang kami jual, dan kami akan memproses pengembalian atau penukaran produk jika buah-buahan yang diterima tidak segar atau rusak.
+            </div>
+          </div>
+        </div>
+        <!-- Question 5 -->
+        <div class="card">
+          <div class="card-header" id="questionFive">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Apakah Frutizy menyediakan pengiriman ke seluruh wilayah di Indonesia?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="questionFive" data-parent="#accordionFaq">
+            <div class="card-body">
+              Maaf, Frutizy saat ini hanya mencakup pengiriman ke pulau Jawa, pulau Sumatra, Bali, Lombok, NTT dan NTB. Kami sedang berusaha untuk memperluas cakupan wilayah pengiriman kami, namun saat ini belum mencakup seluruh wilayah di Indonesia. Kami memohon untuk bersabar dan terus mengunjungi situs kami untuk informasi terbaru tentang perluasan wilayah pengiriman.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Content : END-->
+
+    <!-- Footer : START-->
+    <footer class="text-center text-lg-start text-white bg-dark">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <section class="footer">
+          <div class="row">
+            <!-- Grid column : Deskripsi Singkat -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Frutizy
+              </h6>
+              <p class="text-left">
+                Frutizy adalah solusi yang tepat bagi Anda yang mencari buah-buahan segar dan berkualitas tinggi. 
+                Frutizy menyediakan berbagai jenis buah-buahan yang dikelola dengan baik dan dipetik pada saat yang tepat. 
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column : Kontak Utama-->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Kontak</h6>
+              <p class="text-left"><i class="bi bi-house-door-fill mr-3"></i>Jl. Dipati Ukur No.112, Bandung, Jawa Barat 40132</p>
+              <p class="text-left"><i class="bi bi-envelope-fill mr-3"></i>cs@frutizy.com</p>
+              <p class="text-left"><i class="bi bi-telephone-fill mr-3"></i>(022) 1234 567</p>
+              <p class="text-left"><i class="bi bi-whatsapp mr-3"></i>+ 62 812 3456 7890</p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column : Sosial Media-->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Ikuti Kami</h6>
+              <!-- Facebook -->
+              <a class="btn btn-primary btn-facebook border-0 m-1" href="https://www.facebook.com/" target="_blank" role="button">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <!-- Twitter -->
+              <a class="btn btn-primary btn-twitter border-0 m-1" href="https://www.twitter.com/" target="_blank" role="button" >
+                <i class="bi bi-twitter"></i>
+              </a>
+              <!-- Instagram -->
+              <a class="btn btn-primary btn-instagram border-0 m-1" href="https://www.instagram.com/" target="_blank" role="button">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <!-- Youtube -->
+              <a class="btn btn-primary btn-youtube border-0 m-1" href="https://www.youtube.com/channel/UCG783wPDkCzyc5OXTbV_jZg" target="_blank" role="button">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <!-- Linkedin -->
+              <a class="btn btn-primary btn-linkedin border-0 m-1" href="https://www.linkedin.com/" target="_blank" role="button">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <!-- Tiktok -->
+              <a class="btn btn-primary btn-tiktok border-0 m-1" href="https://www.tiktok.com/" target="_blank" role="button">
+                <i class="bi bi-tiktok"></i>
+              </a>
+
+            </div>
+            <!-- Grid column -->
+          </div>
+        </section>
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3">
+          © 2023 <a class="text-white" href="../index.html">Frutizy</a>. All rights reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer : END-->
+
+    <!-- Bootstrap JS -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lazysizes.min.js"></script>
+    <script>
+      function hanyaAngka(event) {
+        var angka = (event.which) ? event.which : event.keyCode 
+        if (angka != 46 && angka > 31 && (angka < 48 || angka > 57))
+          return false;
+        return true;
+      }
+    </script>
+</body>
+</html>
